@@ -1,0 +1,212 @@
+/* Legacy Timeline Section Styles */
+.legacy-section {
+  background-color: var(--color-warm-ivory);
+  border-bottom: 1px solid var(--color-border-subtle);
+  position: relative;
+}
+
+/* Founder Tribute Box */
+.founder-tribute-card {
+  display: grid;
+  grid-template-columns: 0.9fr 1.1fr;
+  gap: 40px;
+  background-color: #FFFFFF;
+  border: 1px solid var(--color-border-subtle);
+  border-radius: var(--radius-md);
+  padding: 36px;
+  box-shadow: var(--shadow-warm-md);
+  margin-bottom: 64px;
+  align-items: center;
+}
+
+.founder-image-col {
+  position: relative;
+  border-radius: var(--radius-sm);
+  overflow: hidden;
+  box-shadow: var(--shadow-warm-sm);
+}
+
+.founder-archival-img {
+  width: 100%;
+  aspect-ratio: 16/10;
+  object-fit: cover;
+  filter: contrast(1.05);
+}
+
+.archival-stamp {
+  position: absolute;
+  top: 14px;
+  left: 14px;
+  background: rgba(33, 21, 16, 0.9);
+  color: var(--color-brass-light);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  padding: 4px 10px;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--color-brass);
+}
+
+.tribute-badge {
+  display: inline-block;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--color-terracotta);
+  margin-bottom: 8px;
+}
+
+.founder-name {
+  font-size: clamp(1.8rem, 2.5vw, 2.3rem);
+  color: var(--color-tea-brown);
+  margin-bottom: 16px;
+}
+
+.founder-bio {
+  font-size: 0.96rem;
+  color: var(--color-charcoal-muted);
+  line-height: 1.65;
+  margin-bottom: 14px;
+}
+
+.founder-quote-line {
+  margin-top: 18px;
+  padding-left: 16px;
+  border-left: 3px solid var(--color-brass);
+  font-style: italic;
+  font-size: 0.95rem;
+  color: var(--color-tea-brown);
+  font-family: var(--font-heading);
+}
+
+/* Timeline Horizontal Path */
+.timeline-horizontal-path {
+  position: relative;
+  margin-top: 40px;
+}
+
+.timeline-milestones-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 20px;
+}
+
+.milestone-card {
+  display: flex;
+  flex-direction: column;
+  background-color: #FFFFFF;
+  border: 1px solid var(--color-border-subtle);
+  border-radius: var(--radius-sm);
+  padding: 24px 20px;
+  box-shadow: var(--shadow-warm-sm);
+  transition: all var(--transition-smooth);
+}
+
+.milestone-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-warm-md);
+  border-color: var(--color-border-brass);
+}
+
+.milestone-node {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 16px;
+  padding-bottom: 12px;
+  border-bottom: 1px dashed var(--color-border-subtle);
+}
+
+.node-dot {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: var(--color-tea-brown);
+  color: var(--color-milk-cream);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-heading);
+  font-size: 0.78rem;
+  font-weight: 700;
+}
+
+.node-year-badge {
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  background-color: var(--color-milk-cream);
+  color: var(--color-tea-brown);
+  padding: 3px 8px;
+  border-radius: 4px;
+  border: 1px solid var(--color-soft-sand);
+}
+
+.milestone-period {
+  font-size: 0.72rem;
+  font-weight: 700;
+  color: var(--color-terracotta);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  margin-bottom: 4px;
+}
+
+.milestone-title {
+  font-size: 1.12rem;
+  color: var(--color-tea-brown);
+  margin-bottom: 6px;
+  line-height: 1.25;
+}
+
+.milestone-subtitle {
+  font-size: 0.82rem;
+  color: var(--color-charcoal);
+  font-weight: 600;
+  margin-bottom: 12px;
+  line-height: 1.35;
+}
+
+.milestone-desc {
+  font-size: 0.85rem;
+  color: var(--color-charcoal-muted);
+  line-height: 1.55;
+  margin-bottom: 16px;
+  flex: 1;
+}
+
+.milestone-highlight {
+  display: flex;
+  align-items: flex-start;
+  gap: 6px;
+  font-size: 0.78rem;
+  color: var(--color-leaf-green);
+  font-weight: 600;
+  background: rgba(82, 98, 74, 0.08);
+  padding: 6px 8px;
+  border-radius: 4px;
+}
+
+.highlight-bullet {
+  color: var(--color-leaf-green);
+  font-size: 1rem;
+  line-height: 1;
+}
+
+/* Responsive */
+@media (max-width: 1200px) {
+  .timeline-milestones-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 860px) {
+  .founder-tribute-card {
+    grid-template-columns: 1fr;
+    padding: 24px;
+  }
+  .timeline-milestones-grid {
+    grid-template-columns: 1fr;
+  }
+}

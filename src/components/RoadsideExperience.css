@@ -1,0 +1,157 @@
+/* Roadside Experience Styles */
+.roadside-section {
+  background-color: var(--color-milk-cream);
+  border-bottom: 1px solid var(--color-border-subtle);
+}
+
+/* Car Window Banner */
+.car-window-banner {
+  background-color: var(--color-dark-roast);
+  color: var(--color-warm-ivory);
+  border: 1px solid rgba(184, 137, 69, 0.35);
+  border-radius: var(--radius-md);
+  padding: 36px 40px;
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  gap: 32px;
+  align-items: center;
+  margin-bottom: 56px;
+  box-shadow: var(--shadow-warm-md);
+}
+
+.banner-icon-col {
+  width: 68px;
+  height: 68px;
+  border-radius: 50%;
+  background: rgba(184, 137, 69, 0.15);
+  border: 1.5px solid var(--color-brass);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.banner-tag {
+  display: inline-block;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--color-brass-light);
+  margin-bottom: 6px;
+}
+
+.banner-title {
+  font-size: clamp(1.4rem, 2.2vw, 1.8rem);
+  color: var(--color-milk-cream);
+  margin-bottom: 10px;
+}
+
+.banner-desc {
+  font-size: 0.94rem;
+  color: var(--color-soft-sand);
+  line-height: 1.6;
+  margin: 0;
+  max-width: 740px;
+}
+
+.quick-badge {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(184, 137, 69, 0.3);
+  padding: 10px 16px;
+  border-radius: 30px;
+  color: var(--color-brass-light);
+  font-size: 0.82rem;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+/* 6-Step Journey Grid */
+.journey-flow-grid {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 16px;
+}
+
+.journey-step-box {
+  background-color: #FFFFFF;
+  border: 1px solid var(--color-border-subtle);
+  border-radius: var(--radius-sm);
+  padding: 22px 18px;
+  box-shadow: var(--shadow-warm-sm);
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  transition: all var(--transition-smooth);
+}
+
+.journey-step-box:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-warm-md);
+  border-color: var(--color-border-brass);
+}
+
+.journey-step-header {
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+  margin-bottom: 8px;
+}
+
+.journey-num {
+  font-family: var(--font-heading);
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--color-brass);
+}
+
+.journey-action {
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  color: var(--color-tea-brown);
+}
+
+.journey-tag {
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: var(--color-terracotta);
+  margin-bottom: 8px;
+}
+
+.journey-desc {
+  font-size: 0.82rem;
+  color: var(--color-charcoal-muted);
+  line-height: 1.5;
+  margin: 0;
+}
+
+.journey-arrow {
+  display: none; /* Can show on wide screens or connectors */
+}
+
+/* Responsive */
+@media (max-width: 1200px) {
+  .journey-flow-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 860px) {
+  .car-window-banner {
+    grid-template-columns: 1fr;
+    text-align: left;
+    padding: 24px;
+    gap: 20px;
+  }
+  .banner-icon-col {
+    width: 52px;
+    height: 52px;
+  }
+  .journey-flow-grid {
+    grid-template-columns: 1fr;
+  }
+}

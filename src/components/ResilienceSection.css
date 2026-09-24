@@ -1,0 +1,216 @@
+/* Resilience Section Styles */
+.resilience-section {
+  background-color: #211510;
+  color: var(--color-warm-ivory);
+  border-bottom: 1px solid rgba(184, 137, 69, 0.2);
+}
+
+.resilience-grid {
+  display: grid;
+  grid-template-columns: 0.95fr 1.05fr;
+  gap: 56px;
+  align-items: center;
+}
+
+/* Visual Column */
+.resilience-visual-col {
+  position: relative;
+}
+
+.resilience-frame {
+  position: relative;
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  border: 1px solid rgba(184, 137, 69, 0.35);
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.5);
+}
+
+.resilience-main-img {
+  width: 100%;
+  aspect-ratio: 16/10;
+  object-fit: cover;
+  transition: transform var(--transition-smooth);
+}
+
+.resilience-frame:hover .resilience-main-img {
+  transform: scale(1.02);
+}
+
+.resilience-badge-pill {
+  position: absolute;
+  bottom: 16px;
+  left: 16px;
+  background: rgba(33, 21, 16, 0.92);
+  backdrop-filter: blur(8px);
+  color: var(--color-milk-cream);
+  font-size: 0.78rem;
+  font-weight: 700;
+  padding: 6px 14px;
+  border-radius: 30px;
+  border: 1px solid var(--color-brass);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+/* Rubble & Foundation Card */
+.rubble-foundation-card {
+  margin-top: 20px;
+  background-color: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(184, 137, 69, 0.25);
+  border-radius: var(--radius-sm);
+  padding: 18px 20px;
+  display: flex;
+  gap: 16px;
+  align-items: flex-start;
+}
+
+.rubble-icon-wrap {
+  width: 40px;
+  height: 40px;
+  border-radius: 4px;
+  background: rgba(184, 137, 69, 0.2);
+  border: 1px solid var(--color-brass);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.rubble-text strong {
+  display: block;
+  font-size: 0.9rem;
+  color: var(--color-milk-cream);
+  margin-bottom: 6px;
+}
+
+.rubble-text p {
+  font-size: 0.85rem;
+  color: var(--color-soft-sand);
+  line-height: 1.5;
+  margin: 0;
+}
+
+/* Narrative Column */
+.resilience-story-col {
+  display: flex;
+  flex-direction: column;
+}
+
+.torchbearer-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--color-brass-light);
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  margin-bottom: 8px;
+}
+
+.resilience-custodians {
+  font-size: clamp(1.8rem, 2.8vw, 2.5rem);
+  color: var(--color-milk-cream);
+  margin-bottom: 20px;
+  line-height: 1.2;
+}
+
+.resilience-paragraphs {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-bottom: 28px;
+}
+
+.resilience-p {
+  font-size: 0.98rem;
+  color: var(--color-soft-sand);
+  line-height: 1.65;
+}
+
+.resilience-quote {
+  border-left: 3px solid var(--color-brass);
+  padding: 16px 20px;
+  background-color: rgba(255, 255, 255, 0.03);
+  margin-bottom: 32px;
+  border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+}
+
+.resilience-quote p {
+  font-family: var(--font-heading);
+  font-size: 1.15rem;
+  font-style: italic;
+  color: var(--color-milk-cream);
+  margin-bottom: 8px;
+  line-height: 1.45;
+}
+
+.resilience-quote cite {
+  font-size: 0.8rem;
+  color: var(--color-brass-light);
+  font-style: normal;
+  display: block;
+}
+
+/* Metrics Row */
+.resilience-metrics {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  padding-top: 24px;
+}
+
+.metric-box {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.metric-val {
+  font-family: var(--font-heading);
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: var(--color-brass-light);
+  line-height: 1;
+}
+
+.metric-unit {
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: var(--color-milk-cream);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  margin-top: 4px;
+}
+
+.metric-sub {
+  font-size: 0.74rem;
+  color: var(--color-soft-sand);
+}
+
+.metric-sep {
+  width: 1px;
+  height: 48px;
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+  .resilience-grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+}
+
+@media (max-width: 600px) {
+  .resilience-metrics {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 16px;
+  }
+  .metric-sep {
+    display: none;
+  }
+}

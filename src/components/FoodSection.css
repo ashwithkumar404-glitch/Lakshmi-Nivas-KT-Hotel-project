@@ -1,0 +1,215 @@
+/* Food Section Styles */
+.food-section {
+  background-color: var(--color-warm-ivory);
+  border-bottom: 1px solid var(--color-border-subtle);
+}
+
+.food-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 32px;
+  margin-bottom: 48px;
+}
+
+.food-card {
+  background-color: #FFFFFF;
+  border: 1px solid var(--color-border-subtle);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  box-shadow: var(--shadow-warm-sm);
+  display: flex;
+  flex-direction: column;
+  transition: transform var(--transition-smooth), box-shadow var(--transition-smooth);
+}
+
+.food-card:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--shadow-warm-md);
+  border-color: var(--color-border-brass);
+}
+
+.food-image-wrapper {
+  position: relative;
+  aspect-ratio: 4/3;
+  overflow: hidden;
+  background-color: var(--color-dark-roast);
+}
+
+.food-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform var(--transition-smooth);
+}
+
+.food-card:hover .food-img {
+  transform: scale(1.04);
+}
+
+.food-badge-strip {
+  position: absolute;
+  top: 14px;
+  left: 14px;
+  right: 14px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.food-category {
+  background: rgba(33, 21, 16, 0.9);
+  backdrop-filter: blur(4px);
+  color: var(--color-brass-light);
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  padding: 4px 10px;
+  border-radius: 4px;
+  border: 1px solid var(--color-brass);
+}
+
+.food-tag {
+  background: rgba(244, 235, 221, 0.92);
+  color: var(--color-tea-brown);
+  font-size: 0.7rem;
+  font-weight: 700;
+  padding: 4px 8px;
+  border-radius: 4px;
+}
+
+.food-card-body {
+  padding: 26px;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.food-title-row {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  margin-bottom: 12px;
+  gap: 8px;
+}
+
+.food-name {
+  font-size: 1.35rem;
+  color: var(--color-tea-brown);
+  font-weight: 700;
+}
+
+.food-kannada {
+  font-family: var(--font-kannada);
+  font-size: 0.88rem;
+  color: var(--color-brass);
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.food-desc {
+  font-size: 0.92rem;
+  color: var(--color-charcoal-muted);
+  line-height: 1.6;
+  margin-bottom: 20px;
+  flex: 1;
+}
+
+.food-serving-box {
+  background-color: var(--color-milk-cream);
+  padding: 10px 14px;
+  border-radius: var(--radius-sm);
+  margin-bottom: 16px;
+  font-size: 0.82rem;
+}
+
+.serving-label {
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--color-terracotta);
+  font-size: 0.7rem;
+  margin-bottom: 2px;
+}
+
+.serving-value {
+  color: var(--color-charcoal);
+  font-weight: 600;
+}
+
+.food-verified-tag {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--color-leaf-green);
+  border-top: 1px solid var(--color-border-subtle);
+  padding-top: 12px;
+}
+
+.text-leaf {
+  color: var(--color-leaf-green);
+}
+
+/* Disclosure Notice Card */
+.menu-disclosure-card {
+  background-color: #FFFFFF;
+  border: 1px dashed var(--color-terracotta);
+  border-radius: var(--radius-md);
+  padding: 24px 28px;
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+  box-shadow: var(--shadow-warm-sm);
+}
+
+.disclosure-icon {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background-color: rgba(168, 79, 50, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.disclosure-heading {
+  font-size: 1.1rem;
+  color: var(--color-tea-brown);
+  margin-bottom: 6px;
+}
+
+.disclosure-p {
+  font-size: 0.9rem;
+  color: var(--color-charcoal-muted);
+  line-height: 1.55;
+  margin-bottom: 8px;
+}
+
+.disclosure-status {
+  font-size: 0.82rem;
+  font-style: italic;
+  color: var(--color-terracotta);
+  margin: 0;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .food-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 680px) {
+  .food-grid {
+    grid-template-columns: 1fr;
+  }
+  .menu-disclosure-card {
+    flex-direction: column;
+    padding: 20px;
+  }
+}

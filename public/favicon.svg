@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <!-- Glass Rim -->
+  <path d="M16 8 H48 L44 56 C44 58 42 60 40 60 H24 C22 60 20 58 20 56 L16 8 Z" fill="none" stroke="#B88945" stroke-width="2.5" stroke-linejoin="round" />
+  <!-- Bottom Layer: Milk Cream -->
+  <path d="M19.5 34 L20 56 C20 57.5 21.5 58.5 23.5 58.5 H40.5 C42.5 58.5 44 57.5 44 56 L44.5 34 Z" fill="#F4EBDD" />
+  <!-- Microfoam texture -->
+  <line x1="20" y1="34" x2="44" y2="34" stroke="#D9C5A5" stroke-width="1.5" stroke-dasharray="2 1" />
+  <!-- Top Layer: Dark Tea Decoction -->
+  <path d="M16.5 12 L19.5 34 H44.5 L47.5 12 Z" fill="#3A2118" />
+  <!-- Glass Highlight -->
+  <line x1="22" y1="14" x2="24" y2="52" stroke="#FFFFFF" stroke-opacity="0.3" stroke-width="2" stroke-linecap="round" />
+  <!-- Subtle steam curve -->
+  <path d="M28 4 Q30 2 32 4 T36 4" fill="none" stroke="#B88945" stroke-width="1.5" stroke-linecap="round" stroke-opacity="0.7"/>
+</svg>

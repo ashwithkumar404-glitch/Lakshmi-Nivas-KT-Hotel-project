@@ -1,0 +1,54 @@
+/* Mobile Sticky Quick Actions Bar */
+.mobile-quick-actions-bar {
+  display: none;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 850;
+  background-color: rgba(33, 21, 16, 0.96);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-top: 1px solid var(--color-border-brass);
+  padding: 10px 16px;
+  gap: 12px;
+  box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.4);
+}
+
+.quick-bar-btn {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 12px 14px;
+  border-radius: var(--radius-sm);
+  font-size: 0.85rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  transition: all var(--transition-fast);
+}
+
+.quick-bar-btn.primary {
+  background-color: var(--color-brass);
+  color: #211510;
+  box-shadow: var(--shadow-brass);
+}
+
+.quick-bar-btn.secondary {
+  background-color: rgba(255, 255, 255, 0.1);
+  color: var(--color-milk-cream);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+@media (max-width: 768px) {
+  .mobile-quick-actions-bar {
+    display: flex;
+  }
+  
+  /* Give body bottom padding so sticky bar does not cover footer */
+  body {
+    padding-bottom: 64px;
+  }
+}

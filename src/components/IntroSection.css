@@ -1,0 +1,206 @@
+/* Intro Section Styles */
+.intro-section {
+  background-color: var(--color-warm-ivory);
+  border-top: 1px solid var(--color-border-subtle);
+  border-bottom: 1px solid var(--color-border-subtle);
+}
+
+.intro-badge-row {
+  display: flex;
+  justify-content: flex-start;
+  margin-bottom: 24px;
+}
+
+.intro-editorial-layout {
+  display: grid;
+  grid-template-columns: 0.95fr 1.05fr;
+  gap: 56px;
+  align-items: flex-start;
+}
+
+/* Visual Column */
+.intro-visual-col {
+  position: relative;
+}
+
+.intro-image-container {
+  position: relative;
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  box-shadow: var(--shadow-warm-md);
+  border: 1px solid var(--color-border-subtle);
+}
+
+.intro-feature-image {
+  width: 100%;
+  aspect-ratio: 16/10;
+  object-fit: cover;
+  transition: transform var(--transition-smooth);
+}
+
+.intro-image-container:hover .intro-feature-image {
+  transform: scale(1.02);
+}
+
+.intro-image-overlay {
+  position: absolute;
+  bottom: 16px;
+  left: 16px;
+  background: rgba(33, 21, 16, 0.88);
+  backdrop-filter: blur(8px);
+  padding: 8px 14px;
+  border-radius: var(--radius-sm);
+  border: 1px solid rgba(184, 137, 69, 0.3);
+}
+
+.intro-overlay-tag {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.road-code {
+  background-color: var(--color-brass);
+  color: #FFFFFF;
+  font-size: 0.72rem;
+  font-weight: 700;
+  padding: 2px 6px;
+  border-radius: 2px;
+}
+
+.road-name {
+  font-size: 0.75rem;
+  color: var(--color-milk-cream);
+  letter-spacing: 0.04em;
+}
+
+/* Sidebar dispatch note */
+.intro-sidebar-dispatch {
+  margin-top: 20px;
+  padding: 18px 20px;
+  background-color: var(--color-milk-cream);
+  border-left: 3px solid var(--color-brass);
+  border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+}
+
+.dispatch-header {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 6px;
+}
+
+.text-terracotta {
+  color: var(--color-terracotta);
+}
+
+.dispatch-title {
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--color-tea-brown);
+}
+
+.dispatch-body {
+  font-size: 0.88rem;
+  color: var(--color-charcoal-muted);
+  line-height: 1.5;
+  margin: 0;
+}
+
+/* Narrative Column */
+.intro-story-col {
+  display: flex;
+  flex-direction: column;
+}
+
+.intro-main-heading {
+  font-size: clamp(2.2rem, 3.6vw, 3.2rem);
+  color: var(--color-tea-brown);
+  line-height: 1.15;
+  margin-top: 6px;
+  margin-bottom: 12px;
+}
+
+.intro-narrative-prose {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-bottom: 32px;
+}
+
+.lead-paragraph {
+  font-size: 1.18rem;
+  color: var(--color-charcoal);
+  font-weight: 500;
+  line-height: 1.65;
+}
+
+.intro-truth-card {
+  background-color: #FFFFFF;
+  border: 1px solid var(--color-border-subtle);
+  border-radius: var(--radius-sm);
+  padding: 20px 24px;
+  margin-bottom: 32px;
+  box-shadow: var(--shadow-warm-sm);
+}
+
+.truth-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.truth-item {
+  display: flex;
+  flex-direction: column;
+}
+
+.truth-label {
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--color-terracotta);
+  margin-bottom: 4px;
+}
+
+.truth-val {
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: var(--color-tea-brown);
+}
+
+.truth-divider {
+  width: 1px;
+  height: 34px;
+  background-color: var(--color-border-subtle);
+}
+
+.intro-cta-row {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+  .intro-editorial-layout {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+}
+
+@media (max-width: 640px) {
+  .truth-row {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+  .truth-divider {
+    display: none;
+  }
+}

@@ -1,0 +1,303 @@
+/* Visit Section Styles */
+.visit-section {
+  background-color: var(--color-warm-ivory);
+  border-bottom: 1px solid var(--color-border-subtle);
+}
+
+.visit-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  align-items: stretch;
+}
+
+/* Location Card */
+.location-card {
+  background-color: #FFFFFF;
+  border: 1px solid var(--color-border-subtle);
+  border-radius: var(--radius-md);
+  padding: 36px;
+  box-shadow: var(--shadow-warm-sm);
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.location-card-head {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.pin-icon-wrap {
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  background-color: rgba(168, 79, 50, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.location-badge {
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--color-terracotta);
+}
+
+.location-title {
+  font-size: 1.5rem;
+  color: var(--color-tea-brown);
+  line-height: 1.2;
+}
+
+/* Address Box */
+.address-display-box {
+  background-color: var(--color-milk-cream);
+  border: 1px solid var(--color-border-brass);
+  border-radius: var(--radius-sm);
+  padding: 18px 20px;
+  margin-bottom: 28px;
+}
+
+.address-text {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--color-tea-brown);
+  line-height: 1.5;
+  margin-bottom: 12px;
+}
+
+.copy-addr-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: var(--color-charcoal-muted);
+  background-color: #FFFFFF;
+  border: 1px solid var(--color-border-subtle);
+  padding: 6px 14px;
+  border-radius: var(--radius-sm);
+  transition: all var(--transition-fast);
+}
+
+.copy-addr-btn:hover {
+  border-color: var(--color-brass);
+  color: var(--color-tea-brown);
+}
+
+/* Action Buttons */
+.visit-action-buttons {
+  display: flex;
+  gap: 14px;
+  margin-bottom: 32px;
+}
+
+.btn-visit-action {
+  flex: 1;
+  padding: 14px;
+  font-size: 0.88rem;
+}
+
+/* Profile List */
+.highway-profile-list {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  border-top: 1px solid var(--color-border-subtle);
+  padding-top: 24px;
+  margin-top: auto;
+}
+
+.profile-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+}
+
+.profile-icon {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background-color: var(--color-milk-cream);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.profile-content {
+  display: flex;
+  flex-direction: column;
+}
+
+.profile-content strong {
+  font-size: 0.88rem;
+  color: var(--color-tea-brown);
+}
+
+.profile-content span {
+  font-size: 0.82rem;
+  color: var(--color-charcoal-muted);
+  line-height: 1.4;
+}
+
+/* Map Card */
+.map-frame-card {
+  background-color: #FFFFFF;
+  border: 1px solid var(--color-border-subtle);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  box-shadow: var(--shadow-warm-sm);
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.map-iframe-wrapper {
+  width: 100%;
+  flex: 1;
+  min-height: 380px;
+  background-color: var(--color-milk-cream);
+}
+
+.map-card-footer {
+  padding: 16px 20px;
+  background-color: var(--color-warm-ivory);
+  border-top: 1px solid var(--color-border-subtle);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.map-footer-text {
+  display: flex;
+  flex-direction: column;
+}
+
+.map-footer-text strong {
+  font-size: 0.85rem;
+  color: var(--color-tea-brown);
+}
+
+.map-footer-text span {
+  font-size: 0.78rem;
+  color: var(--color-charcoal-muted);
+}
+
+.map-direct-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: var(--color-brass);
+}
+
+.map-direct-link:hover {
+  text-decoration: underline;
+}
+
+/* Contact Modal */
+.contact-modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(33, 21, 16, 0.7);
+  backdrop-filter: blur(8px);
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+}
+
+.contact-modal-card {
+  background-color: #FFFFFF;
+  border-radius: var(--radius-md);
+  max-width: 480px;
+  width: 100%;
+  padding: 28px;
+  border: 1px solid var(--color-border-brass);
+  box-shadow: var(--shadow-warm-lg);
+}
+
+.modal-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  border-bottom: 1px solid var(--color-border-subtle);
+  padding-bottom: 12px;
+}
+
+.modal-title {
+  font-size: 1.25rem;
+  color: var(--color-tea-brown);
+}
+
+.modal-close {
+  font-size: 1.2rem;
+  color: var(--color-charcoal-muted);
+}
+
+.notice-box {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  background-color: var(--color-milk-cream);
+  padding: 14px;
+  border-radius: var(--radius-sm);
+  margin-bottom: 20px;
+}
+
+.notice-box p {
+  font-size: 0.85rem;
+  color: var(--color-charcoal);
+  line-height: 1.45;
+  margin: 0;
+}
+
+.contact-details-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 24px;
+}
+
+.contact-line {
+  display: flex;
+  flex-direction: column;
+  font-size: 0.88rem;
+}
+
+.contact-label {
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: var(--color-terracotta);
+}
+
+.contact-val {
+  font-weight: 600;
+  color: var(--color-tea-brown);
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .visit-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  .visit-action-buttons {
+    flex-direction: column;
+  }
+}

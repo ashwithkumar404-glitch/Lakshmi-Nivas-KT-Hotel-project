@@ -1,0 +1,365 @@
+/* ==========================================================================
+   LAKSHMI NIVAS KT HOTEL - DESIGN SYSTEM
+   Editorial Heritage + Roadside Travel Culture + The Two-Layer KT Motif
+   ========================================================================== */
+
+:root {
+  /* Color System */
+  --color-tea-brown: #3A2118;
+  --color-dark-roast: #211510;
+  --color-milk-cream: #F4EBDD;
+  --color-warm-ivory: #FBF7EF;
+  --color-terracotta: #A84F32;
+  --color-leaf-green: #52624A;
+  --color-brass: #B88945;
+  --color-brass-light: #D4A76A;
+  --color-soft-sand: #D9C5A5;
+  --color-charcoal: #25211E;
+  --color-charcoal-muted: #5C554F;
+  --color-border-subtle: rgba(58, 33, 24, 0.12);
+  --color-border-brass: rgba(184, 137, 69, 0.28);
+  --color-glass-fill: rgba(251, 247, 239, 0.85);
+
+  /* Typography */
+  --font-heading: 'Cormorant Garamond', 'Playfair Display', serif;
+  --font-display: 'Playfair Display', Georgia, serif;
+  --font-body: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-kannada: 'Noto Sans Kannada', 'Plus Jakarta Sans', sans-serif;
+
+  /* Layout & Spacing */
+  --container-max: 1240px;
+  --container-narrow: 860px;
+  --header-height: 74px;
+  --header-height-scrolled: 62px;
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --radius-lg: 12px;
+
+  /* Shadows & Depth */
+  --shadow-warm-sm: 0 2px 8px rgba(33, 21, 16, 0.06);
+  --shadow-warm-md: 0 8px 24px rgba(33, 21, 16, 0.09);
+  --shadow-warm-lg: 0 16px 40px rgba(33, 21, 16, 0.14);
+  --shadow-brass: 0 4px 20px rgba(184, 137, 69, 0.22);
+
+  /* Transitions */
+  --transition-fast: 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+  --transition-smooth: 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+  --transition-slow: 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Reset & Box Sizing */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 16px;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  font-family: var(--font-body);
+  background-color: var(--color-warm-ivory);
+  color: var(--color-charcoal);
+  line-height: 1.65;
+  overflow-x: hidden;
+  position: relative;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Subtle archival paper texture overlay */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  background-image: radial-gradient(var(--color-tea-brown) 0.5px, transparent 0.5px);
+  background-size: 24px 24px;
+  opacity: 0.025;
+  z-index: 999;
+}
+
+/* Typography Base */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
+  color: var(--color-tea-brown);
+  font-weight: 700;
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+}
+
+p {
+  color: var(--color-charcoal-muted);
+  font-size: 1.05rem;
+  font-weight: 400;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+  transition: color var(--transition-fast);
+}
+
+button {
+  font-family: var(--font-body);
+  border: none;
+  background: none;
+  cursor: pointer;
+  outline: none;
+}
+
+button:focus-visible, a:focus-visible {
+  outline: 2px solid var(--color-brass);
+  outline-offset: 3px;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Reusable Containers */
+.container {
+  width: 100%;
+  max-width: var(--container-max);
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 24px;
+  padding-right: 24px;
+}
+
+.container-narrow {
+  width: 100%;
+  max-width: var(--container-narrow);
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 24px;
+  padding-right: 24px;
+}
+
+/* Section Wrapper Standard */
+.section {
+  padding: 100px 0;
+  position: relative;
+}
+
+.section-dark {
+  background-color: var(--color-dark-roast);
+  color: var(--color-warm-ivory);
+}
+
+.section-dark h1,
+.section-dark h2,
+.section-dark h3 {
+  color: var(--color-milk-cream);
+}
+
+.section-dark p {
+  color: var(--color-soft-sand);
+}
+
+.section-cream {
+  background-color: var(--color-milk-cream);
+}
+
+/* The Two-Tone Boundary Motif */
+.two-tone-split-hr {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  margin: 32px 0;
+}
+
+.two-tone-split-hr::before {
+  content: "";
+  height: 2px;
+  flex: 1;
+  background: linear-gradient(90deg, transparent, var(--color-tea-brown));
+}
+
+.two-tone-split-hr::after {
+  content: "";
+  height: 2px;
+  flex: 1;
+  background: linear-gradient(90deg, var(--color-brass), transparent);
+}
+
+.tea-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 14px;
+  background: rgba(58, 33, 24, 0.06);
+  border: 1px solid var(--color-border-subtle);
+  border-radius: 40px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--color-tea-brown);
+}
+
+.section-dark .tea-badge {
+  background: rgba(244, 235, 221, 0.08);
+  border-color: rgba(217, 197, 165, 0.2);
+  color: var(--color-brass-light);
+}
+
+.kannada-label {
+  font-family: var(--font-kannada);
+  font-size: 0.85em;
+  color: var(--color-brass);
+  font-weight: 600;
+  letter-spacing: 0.02em;
+}
+
+/* Section Header Typography Standard */
+.section-header {
+  text-align: center;
+  margin-bottom: 56px;
+}
+
+.section-eyebrow {
+  display: inline-block;
+  font-size: 0.82rem;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--color-terracotta);
+  margin-bottom: 12px;
+}
+
+.section-dark .section-eyebrow {
+  color: var(--color-brass-light);
+}
+
+.section-title {
+  font-size: clamp(2rem, 3.8vw, 3.2rem);
+  color: var(--color-tea-brown);
+  margin-bottom: 16px;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+}
+
+.section-dark .section-title {
+  color: var(--color-milk-cream);
+}
+
+.section-subtitle {
+  font-size: 1.15rem;
+  max-width: 680px;
+  margin: 0 auto;
+  color: var(--color-charcoal-muted);
+}
+
+.section-dark .section-subtitle {
+  color: var(--color-soft-sand);
+}
+
+/* Button Styles - Crafted & Tactile */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 14px 28px;
+  font-size: 0.92rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  border-radius: var(--radius-sm);
+  transition: all var(--transition-fast);
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+}
+
+.btn-primary {
+  background-color: var(--color-tea-brown);
+  color: var(--color-warm-ivory);
+  border: 1px solid var(--color-dark-roast);
+  box-shadow: var(--shadow-warm-sm);
+}
+
+.btn-primary:hover {
+  background-color: var(--color-dark-roast);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-warm-md);
+  color: #FFFFFF;
+}
+
+.btn-brass {
+  background-color: var(--color-brass);
+  color: #FFFFFF;
+  border: 1px solid rgba(0, 0, 0, 0.15);
+  box-shadow: var(--shadow-brass);
+}
+
+.btn-brass:hover {
+  background-color: #A37636;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 24px rgba(184, 137, 69, 0.35);
+}
+
+.btn-secondary {
+  background-color: transparent;
+  color: var(--color-tea-brown);
+  border: 1.5px solid var(--color-tea-brown);
+}
+
+.btn-secondary:hover {
+  background-color: rgba(58, 33, 24, 0.05);
+  transform: translateY(-2px);
+}
+
+.section-dark .btn-secondary {
+  color: var(--color-milk-cream);
+  border-color: var(--color-soft-sand);
+}
+
+.section-dark .btn-secondary:hover {
+  background-color: rgba(244, 235, 221, 0.1);
+}
+
+/* Cards & Editorial Boxes */
+.editorial-card {
+  background-color: #FFFFFF;
+  border: 1px solid var(--color-border-subtle);
+  border-radius: var(--radius-sm);
+  padding: 32px;
+  box-shadow: var(--shadow-warm-sm);
+  transition: transform var(--transition-smooth), box-shadow var(--transition-smooth);
+}
+
+.editorial-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-warm-md);
+  border-color: var(--color-border-brass);
+}
+
+/* Reduced Motion */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .section {
+    padding: 64px 0;
+  }
+  .container, .container-narrow {
+    padding-left: 18px;
+    padding-right: 18px;
+  }
+}
